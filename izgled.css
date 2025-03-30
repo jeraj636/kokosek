@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --zadaj: #1a1a1a;
+    --besedilo: whitesmoke;
+    --besedilo-neaktivno: #c3c3c3;
+    --debelina-crt: 2px
+}
+
+body,
+html {
+    background-color: var(--zadaj);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+a {
+    all: unset;
+}
+
+* {
+    font-family: 'Poppins';
+}
+
+table,
+td,
+th {
+    color: var(--besedilo);
+    text-align: center;
+}
+
+h2 {
+    color: var(--besedilo);
+}
+
+.glavni {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 2.3rem;
+    color: var(--besedilo);
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+p,
+label {
+    color: var(--besedilo);
+    font-family: 'Merriweather';
+}
+
+nav {
+    padding: 1vh;
+    border-bottom: var(--debelina-crt) solid var(--besedilo);
+    display: flex;
+    padding-top: 2vh;
+}
+
+footer {
+    position: fixed;
+    background-color: var(--zadaj);
+    border-top: var(--besedilo) var(--debelina-crt) solid;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+nav>section {
+    display: inline-block;
+}
+
+nav>section:first-child {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav>section:last-child {
+    width: 30%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+
+a:not(:first-child) {
+    margin-left: 1vw;
+}
+
+@media(min-width: 768px) {
+
+    button,
+    input[type="submit"] {
+        all: unset;
+        color: var(--besedilo-neaktivno);
+        border-bottom: transparent var(--debelina-crt) solid;
+        font-size: 1rem;
+    }
+
+    .misel {
+        width: 70%;
+    }
+}
+
+h3 {
+    color: #909090;
+    margin: 0;
+    padding: 0;
+}
+
+@media(max-width: 768px) {
+
+    button,
+    input[type="submit"] {
+        all: unset;
+        color: var(--besedilo-neaktivno);
+        border: var(--besedilo) var(--debelina-crt) solid;
+        font-size: .5rem;
+        margin: 0.5vh;
+        padding: 0.5vh;
+        border-radius: 3vh;
+    }
+
+    .misel {
+        width: 95%;
+    }
+
+}
+
+button:hover,
+input[type="submit"]:hover {
+    border-bottom-color: var(--besedilo);
+    color: var(--besedilo);
+    transition: border-bottom-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+input[type="text"],
+input[type="password"] {
+    all: unset;
+    border-bottom: var(--debelina-crt) solid var(--besedilo);
+    color: var(--besedilo);
+}
+
+@media(max-width: 768px) {
+    input[type="text"] {
+        width: 50%;
+
+    }
+
+    input[type="password"] {
+        width: 50%;
+
+    }
+}
+
+input[type="submit"] {
+    margin-top: 2vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    all: unset;
+    border-bottom: var(--debelina-crt) solid var(--besedilo);
+    color: var(--besedilo) !important;
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--zadaj) inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input {
+    color: var(--besedilo);
+}
+
+input[type="date"]:focus,
+input[type="date"] {
+    all: unset;
+    color: var(--besedilo);
+    background-color: transparent;
+    padding: .5vh;
+    margin-top: 1vh;
+    border-bottom: var(--debelina-crt) var(--besedilo-neaktivno) solid;
+
+}
+
+textarea,
+textarea:focus {
+    all: unset;
+    background-color: transparent;
+    border: var(--debelina-crt) solid var(--besedilo);
+    border-radius: 2vh;
+    color: white;
+    width: 50%;
+    height: 40vh;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    resize: none;
+    padding: 1vh;
+}
+
+section {
+    all: unset;
+    background-color: transparent;
+    border: var(--debelina-crt);
+}
+
+.glavni .misel p {
+    border-left: var(--debelina-crt) solid var(--besedilo);
+    text-indent: 2vh;
+    padding-left: 1vh;
+}
+
+pre {
+    color: var(--besedilo);
+}
