@@ -1,3 +1,3 @@
 <?php
-header('loaction: glavno/');
+header('location: glavno/');
 die();
