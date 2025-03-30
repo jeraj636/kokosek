@@ -21,7 +21,7 @@ if (isset($_SESSION['up_ime'])) {
             <a href="../glavno/"><button>Domov</button></a>
             <a href="../Jakob_thoughts/"> <button>Jakob thoughts</button></a>
             <a href="../kroky_review/"> <button>Kroky review</button></a>
-            <a href="../glavno/"> <button>Varen kokošnjak</button></a>
+            <a href="../varen_kokosnjak/"> <button>Varen kokošnjak</button></a>
             <a href="../glavno/"> <button>Kazino</button></a>
             <a href="../tabulature/"> <button>Tabulature</button></a>
             <a href="../glavno/"> <button>Stanje</button></a>
