@@ -230,3 +230,9 @@ section {
 pre {
     color: var(--besedilo);
 }
+
+canvas{
+    border: 1px solid white;
+    width: 60vw;
+    height: 60vh;
+}

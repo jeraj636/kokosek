@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <?php require('../funkcije/glava.php'); ?>
+</head>
+<body>
+    <?php require('../funkcije/meni.php'); ?>
+    
+</body>
+</html>

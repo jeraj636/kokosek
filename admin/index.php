@@ -2,7 +2,7 @@
 require('../funkcije/zacetek.php');
 if (!isset($_SESSION['admin']) || $_SESSION['admin'] != true) {
     header('location: ../glavno/');
-    die();
+    die();exit;
 }
 ?>
 <div class="glavni">
