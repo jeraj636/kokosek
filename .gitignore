@@ -1,0 +1,26 @@
+# Odvisnosti
+node_modules/
+
+# Izhod
+dist/
+out/
+build/
+
+# Dnevnik
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Okolje
+.env
+.env.*
+!.env.example
+
+# Sistemske datoteke
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Urejevalnik
+.vscode/
+.idea/
