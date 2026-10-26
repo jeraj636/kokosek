@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Jakob Jeraj">
+    <meta name="description" content="osebna spletna stran" />
+    <title>Kokosek</title>
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="../src/dasy.css" media="all" />
+</head>
+
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="flex-1">
+
+                <a href="/" id="domovBtn" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                        height="20"
+                        viewBox="0 0 24 24"><!-- Icon from Ultimate free icons by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5"
+                            d="M3.753 13.944v8.25h6v-6a1.5 1.5 0 0 1 1.5-1.5h1.5a1.5 1.5 0 0 1 1.5 1.5v6h6v-8.25m-19.5-1.5L10.942 2.255a1.5 1.5 0 0 1 2.122 0l10.189 10.189" />
+                    </svg>Domov</a>
+                <a href="/jakob_thoughts/" id="thoughtsBtn" class="btn btn-primary"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24"><!-- Icon from Ultimate free icons by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5">
+                            <path
+                                d="M16.5 21.513a1.5 1.5 0 0 1-1.9 1.446L4.1 20.042A1.5 1.5 0 0 1 3 18.6V2.487A1.5 1.5 0 0 1 4.9 1.04l10.5 3.39a1.5 1.5 0 0 1 1.1 1.446z" />
+                            <path d="M4.5.987h15a1.5 1.5 0 0 1 1.5 1.5v15.75a1.5 1.5 0 0 1-1.5 1.5h-3" />
+                        </g>
+                    </svg>Jakob thoughts</a>
+                <a href="/kroky_review/" id="krokyBtn" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="20" height="20"
+                        viewBox="0 0 24 24"><!-- Icon from Ultimate free icons by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5">
+                            <path
+                                d="M2.731 18.33h18.538m-12.53-3.486L7.057 2.307a.754.754 0 0 1 .669-.84l2.309-.29a.77.77 0 0 1 .869.647L12.728 15.4M3.267 9.331l-.808-3.495a.745.745 0 0 1 .48-.875L7.2 3.4m7.443 11.5l1.691-12.593a.75.75 0 0 0-.669-.84l-2.308-.29a.77.77 0 0 0-.87.647L11.7 7.717m8.425 1.613l.807-3.494a.745.745 0 0 0-.48-.875L16.188 3.4" />
+                            <path
+                                d="M23.07 9.626a.83.83 0 0 0-.638-.3H19.4a.765.765 0 0 0-.765.635a6.71 6.71 0 0 1-6.871 5.5a6.71 6.71 0 0 1-6.87-5.5a.77.77 0 0 0-.766-.635h-2.56a.83.83 0 0 0-.638.3a.77.77 0 0 0-.16.667l2.908 11.918a.81.81 0 0 0 .8.619h15.046a.81.81 0 0 0 .8-.619l2.909-11.918a.78.78 0 0 0-.163-.667" />
+                        </g>
+                    </svg>Kroky review</a>
+                <a href="/cejsta/" id="cejstaBtn" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="20" height="20"
+                        viewBox="0 0 24 24"><!-- Icon from Ultimate free icons by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5" d="m1.5 23.25l6-22.5m15 22.5l-6-22.5M12 17.25v6m0-15v4.5m0-12v3" />
+                    </svg>Cejsta</a>
+                <a href="/knjige/" id="knjigeBtn" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="20" height="20"
+                        viewBox="0 0 24 24"><!-- Icon from Ultimate free icons by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5">
+                            <path
+                                d="M12 22.8V5.387S9.545 2.66 1.268 2.55a.514.514 0 0 0-.52.52v16.374a.516.516 0 0 0 .5.52C9.543 20.071 12 22.8 12 22.8" />
+                            <path
+                                d="M9 11.855A21.3 21.3 0 0 0 3.74 10.8M9 16.05A21.3 21.3 0 0 0 3.74 15M15 11.855a21.3 21.3 0 0 1 5.26-1.055M15 16.05c1.702-.57 3.47-.923 5.26-1.05" />
+                            <path
+                                d="M20.26 2.67q1.139-.1 2.472-.12a.514.514 0 0 1 .518.52v16.374a.516.516 0 0 1-.5.52C14.457 20.071 12 22.8 12 22.8m0 0V5.387s1.143-1.27 4.5-2.111" />
+                            <path d="M20.25 7.8V1.2a24 24 0 0 0-3.75.6v6l1.875-1.5z" />
+                        </g>
+                    </svg>Knjige</a>
+                <a href="/stanje/" id="stanjeBtn" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="20" height="20"
+                        viewBox="0 0 24 24"><!-- Icon from Ultimate free icons by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <g fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M14.25 16.5h-.75A1.5 1.5 0 0 1 12 15v-3.75a.75.75 0 0 0-.75-.75h-.75" />
+                            <path d="M11.625 7.5a.375.375 0 0 1 0-.75m0 .75a.375.375 0 0 0 0-.75" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 23.25c6.213 0 11.25-5.037 11.25-11.25S18.213.75 12 .75S.75 5.787.75 12S5.787 23.25 12 23.25" />
+                        </g>
+                    </svg>Stanje</a>
+            </div>
+
+            <div class="flex-none">
+                <a href="/prijava/" id="prijavaBtn" class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="20" height="20"
+                        viewBox="0 0 24 24"><!-- Icon from Ultimate free icons by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5">
+                            <path stroke-miterlimit="10"
+                                d="M9.432 10.57a4.718 4.718 0 1 0 0-9.436a4.718 4.718 0 0 0 0 9.436m-8.384 9.277c1.096-3.59 4.49-6.282 8.387-6.282c2.455 0 4.71 1.068 6.317 2.755" />
+                            <path d="M12.923 19.433h10.03m-3.434-3.436l3.434 3.434l-3.434 3.434" />
+                        </g>
+                    </svg>Prijava</a>
+
+            </div>
+
+        </div>
+        </div>
+        <hr class="border border-primary border-1">
+    </header>
+    <div class="zabojnik">
+        <div class="levo"></div>
+        <main class="sredina">
+            <div style="height: 3vh;"></div>
+            <h1>Knjige</h1>
+            <p>Knjige, ki so mi bile všeč</p>
+            <div style="height: 3vh;"></div>
+            <ul class="list bg-base-100 rounded-box border-2">
+
+
+                <li class="list-row">
+                    <div class="list-col-grow">
+                        <div>
+                            <h3>Golaž</h3>
+                        </div>
+                        <div>
+                            <h2>datum</h2>
+                        </div>
+                    </div>
+                    <button href="/" class="btn btn-secondary">Preberi</button>
+                </li>
+
+
+            </ul>
+        </main>
+        <div class="desno"></div>
+    </div>
+
+    <div class="noga">
+        <hr class="border border-primary border-1">
+
+        <footer class="sm:footer-horizontal bg-neutral text-neutral-content p-10">
+            <h2 id="pravice" style="align-content: center;">Vse pravice pridržane!</h2>
+        </footer>
+    </div>
+
+
+    <script type="module" src="./src/main.ts"></script>
+
+</body>
+
+</html>
