@@ -1,44 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
-@plugin "daisyui" {
-  themes: kokosekSvetla;
-}
 @plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+  themes: dark --default;
+}
 
 @plugin "daisyui/theme" {
-  name: "light";
+  name: "dark";
   default: true;
   prefersdark: false;
   color-scheme: "light";
-  --color-base-100: #f6c694;
-  --color-base-200: #f6f5e1;
-  --color-base-300: #c7925d;
-  --color-base-content: #733e01;
-  --color-primary: #f6f5e1;
-  --color-primary-content: #733e01;
-  --color-secondary: #733e01;
-  --color-secondary-content: #f6f5e1;
-  --color-accent: #e8a284;
-  --color-accent-content: #733e01;
-  --color-neutral: #733e01;
-  --color-neutral-content: #f6f5e1;
-  --color-info: #c1d871;
-  --color-info-content: #733e01;
-  --color-success: #e8a284;
-  --color-success-content: #733e01;
-  --color-warning: #733e01;
-  --color-warning-content: #e8a284;
-  --color-error: #e8a284;
-  --color-error-content: #733e01;
-  --radius-selector: 0rem;
+  --color-base-100: hsl(38.7 50.8% 64.1%);
+  --color-base-200: hsl(38.7 50.8% 74.1%);
+  --color-base-300: hsl(38.7 50.8% 94.1%);
+  --color-base-content: #2c2a21;
+  --color-primary: hsl(38.7 50.8% 94.1%);
+  --color-primary-content: #2c2a21;
+  --color-secondary: #2d6c3f;
+  --color-secondary-content: hsl(38.7 50.8% 64.1%);
+  --color-accent: #a04c42;
+  --color-accent-content: #ecebef;
+  --color-neutral: #2c2a21;
+  --color-neutral-content: hsl(38.7 50.8% 94.1%);
+  --color-info: #2d6c3f;
+  --color-info-content: #ecebef;
+  --color-success: #2c2a21;
+  --color-success-content: #d2b175;
+  --color-warning: #d2b175;
+  --color-warning-content: #a04c42;
+  --color-error: #a04c42;
+  --color-error-content: #ecebef;
+  --radius-selector: 1rem;
   --radius-field: 1rem;
   --radius-box: 1rem;
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
+  --size-selector: 0.1875rem;
+  --size-field: 0.21875rem;
   --border: 2px;
   --depth: 0;
   --noise: 0;
 }
+
 h1,
 h2,
 h3 {
