@@ -1,0 +1,7 @@
+{
+    "name": "jakob/api",
+    "description": "api za kokosek.si",
+    "type": "project",
+    "license": "GPL-2.0-only",
+    "require": {}
+}
