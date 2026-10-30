@@ -3,5 +3,7 @@
     "description": "api za kokosek.si",
     "type": "project",
     "license": "GPL-2.0-only",
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^5.8"
+    }
 }

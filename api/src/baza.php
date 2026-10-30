@@ -1,15 +1,18 @@
 <?php
+require_once __DIR__ . '/../vendor/autoload.php';
+Dotenv\Dotenv::createUnsafeImmutable(__DIR__ . '/../')->load();
+
 class BazaException extends Exception
 {
 
 }
 class Baza
 {
-    private $pbUser = "";
-    private $pbGeslo = "";
-    private $pbStreznik = "";
-    private $pbPort = "";
-    private $pbIme = "";
+    private static $pbUser = "";
+    private static $pbGeslo = "";
+    private static $pbStreznik = "";
+    private static $pbPort = "";
+    private static $pbIme = "";
     public static function init()
     {
         $napakaBesedilo = "Napaka pri branju .env za spremenljivko: ";
@@ -23,9 +26,11 @@ class Baza
     }
     public static function poveziSe(): mysqli
     {
-        try {
-            return new mysqli(Baza::$pbStreznik, Baza::$pbUser, Baza::$pbGeslo, Baza::$pbIme);
+        $povezava = new mysqli(Baza::$pbStreznik, Baza::$pbUser, Baza::$pbGeslo, Baza::$pbIme);
+        if ($povezava->connect_error) {
+            throw new BazaException("Napaka pri povezavi");
         }
+        return $povezava;
     }
 
 }
