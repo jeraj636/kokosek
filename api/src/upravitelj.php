@@ -1,6 +1,5 @@
 <?php
 
-use Dotenv\Exception\InvalidFileException;
 use Dotenv\Exception\InvalidPathException;
 require_once "baza.php";
 function obdelajZahtevo($metoda, $vir, $id)
@@ -9,6 +8,8 @@ function obdelajZahtevo($metoda, $vir, $id)
     $dovoljeneFunkcije = ["thoughts"];
     if (in_array($vir, $dovoljeneFunkcije)) {
         $vir($metoda, $id);
+    } else {
+        echo json_encode(["uporabi primeren endpoint"]);
     }
 }
 function thoughts($metoda, $id)
