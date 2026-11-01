@@ -20,7 +20,7 @@ function thoughts($metoda, $id)
 
         $povezava = Baza::poveziSe();
         if ($metoda == 'GET' && !isset($id)) {
-            $sql = "SELECT id_misli,naslov,datum_objave FROM misel WHERE id_tipa_misli IN (SELECT id_tipa_misli FROM tip_misli WHERE naziv_tipa_misli = 'jakob_thought')";
+            $sql = "SELECT id_misli,naslov,datum_objave FROM misel WHERE id_tipa_misli IN (SELECT id_tipa_misli FROM tip_misli WHERE naziv_tipa_misli = 'jakob_thought') ORDER BY datum_objave DESC";
             try {
                 $rezultat = $povezava->query($sql);
                 echo json_encode($rezultat->fetch_all(MYSQLI_ASSOC));

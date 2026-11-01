@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "concurrently -k \"npm --prefix web run dev\" \"php -S localhost:8000 -t api\""
+    "dev": "concurrently -k \"npm --prefix web run dev\" \"php -S localhost:8000 -t api\"",
+    "build": "npm --prefix web run build"
   },
   "repository": {
     "type": "git",
