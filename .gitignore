@@ -1,6 +1,8 @@
 # Odvisnosti
 node_modules/
-
+vendor/
+#neki
+misli/
 # Izhod
 dist/
 out/
