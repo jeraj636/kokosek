@@ -13,12 +13,13 @@ if (array_key_exists('HTTP_ORIGIN', $_SERVER)) {
 } else {
     $origin = $_SERVER['REMOTE_ADDR'];
 }
-
+/*
 $dovoljeneDomene = explode(' ', getenv("DOVOLJENE_SPLETNE_STRANI"));
 if (in_array($origin, $dovoljeneDomene, true)) {
     header("Access-Control-Allow-Origin: " . $origin);
     header("Vary: Origin");
 }
+*/
 
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
