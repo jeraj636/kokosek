@@ -46,6 +46,7 @@ jobs:
       - name: Deploy frontend
         run: |
           rsync -az --delete \
+            --exclude='config.json' \
             -e "ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=yes" \
             web/dist/ \
             ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/var/www/html/kokosek/web/
