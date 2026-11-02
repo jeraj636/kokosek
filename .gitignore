@@ -1,6 +1,7 @@
 # Odvisnosti
 node_modules/
 vendor/
+
 #neki
 misli/
 # Izhod
@@ -26,3 +27,6 @@ Desktop.ini
 # Urejevalnik
 .vscode/
 .idea/
+
+# Data
+api/data/

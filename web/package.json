@@ -12,11 +12,12 @@
   },
   "license": " GPL-2.0-only",
   "author": "Jakob Jeraj",
-  "type": "commonjs",
-  "main": "index.js",
+  "type": "module",
+  "main": "",
   "scripts": {
     "test": "jenkins",
-    "dev": "vite --config vite.config.js"
+    "dev": "vite --config vite.config.js",
+    "build": "tsc && vite build"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.20",

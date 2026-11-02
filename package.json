@@ -1,0 +1,26 @@
+{
+  "name": "kokosek",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "concurrently -k \"npm --prefix web run dev\" \"php -S localhost:8000 -t api\"",
+    "build": "npm --prefix web run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeraj636/kokosek.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jeraj636/kokosek/issues"
+  },
+  "homepage": "https://github.com/jeraj636/kokosek#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
