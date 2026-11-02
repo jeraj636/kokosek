@@ -33,7 +33,12 @@ if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") {
 header("Content-Type: application/json");
 
 $metoda = $_SERVER['REQUEST_METHOD'];
-$zahteva = explode("/", trim($_SERVER['PATH_INFO'] ?? '', "/"));
+$pot = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+// Odstranimo /api/ iz začetka poti
+$pot = preg_replace('#^/api/?#', '', $pot);
+
+$zahteva = explode("/", trim($pot, "/"));
 
 $vir = $zahteva[0] ?? null;
 $id = $zahteva[1] ?? null;
