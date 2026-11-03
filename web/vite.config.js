@@ -25,6 +25,10 @@ export default defineConfig({
         ),
         knjige: resolve(import.meta.dirname, "knjige/index.html"),
         krokyReview: resolve(import.meta.dirname, "kroky_review/index.html"),
+        krokyReviewMisel: resolve(
+          import.meta.dirname,
+          "kroky_review/review/index.html",
+        ),
       },
     },
   },
