@@ -1,8 +1,8 @@
 import { dobiConfig } from "../config.js";
 import { Misel } from "./misel.js";
-async function dobiMisli(): Promise<Misel[]> {
+async function dobiMisli(endpoint: string): Promise<Misel[]> {
   const config = await dobiConfig();
-  const podatki = await fetch(config.apiURL + "thoughts");
+  const podatki = await fetch(config.apiURL + endpoint);
   return (await podatki.json()) as Misel[];
 }
 function narediLi(m: Misel): HTMLLIElement {
@@ -43,8 +43,8 @@ function narediLi(m: Misel): HTMLLIElement {
 
   return li;
 }
-export async function generirajSeznam() {
-  const misli = await dobiMisli();
+export async function generirajSeznam(endpoint: string) {
+  const misli = await dobiMisli(endpoint);
   const seznam =
     document.getElementById("seznam") ??
     ((() => {
