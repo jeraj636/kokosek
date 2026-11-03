@@ -116,10 +116,19 @@ main {
 .sredina {
   flex: 1 1 auto;
   display: flex;
-  width: 50vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 600px) {
+  .sredina {
+    width: 60vw;
+  }
+}
+@media (max-width: 600px) {
+  .sredina {
+    width: 90vw;
+  }
 }
 .desno {
   flex: 1 1 auto;
