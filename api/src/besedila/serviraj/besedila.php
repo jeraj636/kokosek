@@ -1,5 +1,6 @@
 <?php
-require_once "umri.php";
+require_once __DIR__ . "/../../umri.php";
+require_once __DIR__ . "/../../baza.php";
 function specificnoBesedilo($id)
 {
     if (!isset($id)) {

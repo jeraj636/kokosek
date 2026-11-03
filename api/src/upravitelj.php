@@ -1,7 +1,7 @@
 <?php
 
 require_once "baza.php";
-require_once "thoughts.php";
+require_once "besedila/serviraj/thoughts.php";
 
 function obdelajZahtevo($metoda, $vir, $id)
 {
