@@ -1,0 +1,9 @@
+#vsebina {
+  overflow-y: scroll;
+  height: 65vh;
+}
+#vsebina p {
+  margin-bottom: 0.5vh;
+  padding: 2%;
+  text-indent: 2vw;
+}
