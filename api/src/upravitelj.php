@@ -1,16 +1,24 @@
 <?php
 
-require_once "baza.php";
-require_once "besedila/serviraj/thoughts.php";
-require_once "besedila/serviraj/reviews.php";
+use function Besedilo\besedilo;
+use function Uporabnik\uporabnik;
 
-function obdelajZahtevo($metoda, $vir, $id)
+require_once __DIR__ . "/baza.php";
+require_once __DIR__ . "/uporabnik/uporabnik.php";
+require_once __DIR__ . "/besedilo/besedilo.php";
+function obdelajZahtevo($metoda, $vir, $akcija)
 {
-    Baza::init();
-    $dovoljeneFunkcije = ["thoughts", "reviews"];
-    if (in_array($vir, $dovoljeneFunkcije)) {
-        $vir($metoda, $id);
+    try {
+        Baza::init();
+    } catch (BazaException $e) {
+        die();
+    }
+
+    $dovoljeneFunkcije = ["besedilo" => "Besedilo\\besedilo", "uporabnik" => "Uporabnik\\uporabnik"];
+
+    if (isset($dovoljeneFunkcije[$vir])) {
+        $dovoljeneFunkcije[$vir]($metoda, $akcija);
     } else {
-        echo json_encode(["uporabi primeren endpoint"]);
+        die();
     }
 }

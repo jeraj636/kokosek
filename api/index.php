@@ -41,10 +41,10 @@ $pot = preg_replace('#^/api/?#', '', $pot);
 $zahteva = explode("/", trim($pot, "/"));
 
 $vir = $zahteva[0] ?? null;
-$id = $zahteva[1] ?? null;
+$akcija = $zahteva[1] ?? null;
 
 require_once "src/upravitelj.php";
-obdelajZahtevo($metoda, $vir, $id);
+obdelajZahtevo($metoda, $vir, $akcija);
 
 
 

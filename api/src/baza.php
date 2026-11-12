@@ -28,7 +28,7 @@ class Baza
     {
         $povezava = new mysqli(Baza::$pbStreznik, Baza::$pbUser, Baza::$pbGeslo, Baza::$pbIme);
         if ($povezava->connect_error) {
-            throw new BazaException("Napaka pri povezavi");
+            throw new BazaException("Povezave z bazo ni mogoče vzpostaviti");
         }
         return $povezava;
     }

@@ -2,7 +2,15 @@ import { dobiConfig } from "../config.js";
 import { Misel } from "./misel.js";
 async function dobiMisli(endpoint: string): Promise<Misel[]> {
   const config = await dobiConfig();
-  const podatki = await fetch(config.apiURL + endpoint);
+  const podatkiZaPoslat = { id: null };
+  const podatki = await fetch(config.apiURL + endpoint, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify(podatkiZaPoslat),
+  });
   return (await podatki.json()) as Misel[];
 }
 function narediLi(m: Misel, podstran: string): HTMLLIElement {

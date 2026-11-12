@@ -1,3 +1,3 @@
 import { generiraj } from "./generiraj_spletno_stran.js";
 
-await generiraj("reviews");
+await generiraj("besedilo/kroky");

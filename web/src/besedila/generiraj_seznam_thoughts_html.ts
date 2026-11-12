@@ -1,3 +1,3 @@
 import { generirajSeznam } from "./generiraj_seznam.js";
 
-await generirajSeznam("thoughts", "thought");
+await generirajSeznam("besedilo/thought", "thought");
