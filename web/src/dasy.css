@@ -53,6 +53,11 @@ h1 {
 h3 {
   font-weight: bold;
 }
+.naslov {
+  font-family: "National Park", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
 p {
   font-family: Petrona, serif;
   font-size: 1rem;
@@ -65,6 +70,9 @@ p {
   }
   p {
     font-family: Petrona, serif;
+    font-size: 1rem;
+  }
+  .naslov {
     font-size: 1rem;
   }
 }

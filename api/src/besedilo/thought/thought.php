@@ -2,8 +2,6 @@
 
 namespace Besedilo;
 
-use LogicException;
-use NapacnaApiPoizvedba;
 require_once __DIR__ . "/../besedilo/dobi_vsa_besedila.php";
 require_once __DIR__ . "/../besedilo/dobi_besedilo.php";
 function thought($podatki)

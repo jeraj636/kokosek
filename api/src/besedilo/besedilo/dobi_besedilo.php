@@ -4,6 +4,8 @@ namespace Besedilo;
 require_once __DIR__ . "/../../baza.php";
 
 use Baza;
+use BazaException;
+use Dotenv\Exception\InvalidFileException;
 use LogicException;
 function dobiBesedilo($id)
 {
@@ -16,20 +18,20 @@ function dobiBesedilo($id)
     $podatki = $rez->fetch_assoc();
 
     if (!$podatki) {
-        umri();
+        throw new BazaException("Napaka pri pridobivanju posameznega besedila");
     }
 
     $imeDat = "data/" . $podatki["pot_do_misli"];
     if (file_exists($imeDat)) {
         $dat = fopen($imeDat, "r");
         if (!$dat) {
-            umri();
+            throw new InvalidFileException("Napaka pri pridobivanju datoteke");
         }
         $podatki["besedilo"] = fread($dat, filesize($imeDat));
         //pot do misli je nepotrebna in potencialno nevarna za razglašati
         unset($podatki["pot_do_misli"]);
         return json_encode($podatki);
     } else {
-        umri();
+        throw new InvalidFileException("Datoteka ne obstaja");
     }
 }
