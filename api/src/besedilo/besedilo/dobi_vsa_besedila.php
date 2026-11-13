@@ -15,5 +15,6 @@ function dobiVsaBesedila($tip)
         throw new BazaException("Napaka pri pridobivanju besedila z id: " . $tip);
     }
     $rezultat = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+
     return json_encode($rezultat);
 }

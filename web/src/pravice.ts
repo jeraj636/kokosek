@@ -1,5 +1,4 @@
 // Pravice
-import "./dasy.css";
 const praviceBesedilo = document.getElementById(
   "pravice",
 ) as HTMLParagraphElement;

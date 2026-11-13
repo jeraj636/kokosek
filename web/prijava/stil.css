@@ -1,0 +1,18 @@
+/* Firefox autofill */
+input:-moz-autofill,
+input:autofill {
+  box-shadow: 0 0 0 100px var(--color-base-100) inset !important;
+  -moz-text-fill-color: var(--color-base-content) !important;
+  caret-color: var(--color-base-content);
+}
+
+/* Chrome / Chromium autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 100px var(--color-base-100) inset !important;
+  -webkit-text-fill-color: var(--color-base-content) !important;
+}
+label {
+  height: 3vh;
+}

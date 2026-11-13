@@ -12,8 +12,16 @@ function uporabnik($metoda, $akcija)
     if ($metoda !== "POST") {
         throw new NapacnaMetoda($metoda);
     }
+
     $podatki = json_decode(file_get_contents("php://input"), true);
-    if (in_array($akcija, ["prijava", "registracija"])) {
-        $akcija($podatki);
+
+
+    $dovoljeneAkcije = [
+        "prijava" => __NAMESPACE__ . "\\prijava",
+        "registracija" => __NAMESPACE__ . "\\registracija"
+    ];
+
+    if (isset($dovoljeneAkcije[$akcija])) {
+        $dovoljeneAkcije[$akcija]($podatki);
     }
 }

@@ -24,6 +24,8 @@ export default defineConfig({
           "jakob_thoughts/thought/index.html",
         ),
         knjige: resolve(import.meta.dirname, "knjige/index.html"),
+        prijava: resolve(import.meta.dirname, "prijava/index.html"),
+        registracija: resolve(import.meta.dirname, "registracija/index.html"),
         krokyReview: resolve(import.meta.dirname, "kroky_review/index.html"),
         krokyReviewMisel: resolve(
           import.meta.dirname,
